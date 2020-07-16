@@ -32,8 +32,49 @@ class ValidateISBNTest {
 	@Test 
 	public void checkNotUpperCase() {
 		ValidateISBN validator = new ValidateISBN(); 
-		boolean notUpperCase = validator.upperCaseMaker("ZACH"); 
+		boolean notUpperCase = validator.upperCaseMaker("ZACHaa"); 
+		assertFalse(notUpperCase);
+		notUpperCase = validator.upperCaseMaker("John"); 
 		assertFalse(notUpperCase);
 	}
+	
+	
+	// Exception 
+	@Test 
+	public void nineDigitISBNAreNotAllowed() {
+		ValidateISBN validator = new ValidateISBN(); 	
+		assertThrows(NumberFormatException.class, () -> {
+			boolean result = validator.checkISBNOne("123456789"); 
+		}); 
+	}
+	
+	@Test
+	public void helloWorldNotAllowed() {
+		ValidateISBN validator = new ValidateISBN(); 
+		assertThrows(NumberFormatException.class, () -> {
+			boolean result = validator.checkISBNOne("helloworld"); 
+		}); 
+	}
+	
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
