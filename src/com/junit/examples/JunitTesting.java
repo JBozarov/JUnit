@@ -8,15 +8,14 @@ public class JunitTesting {
 		return x*x; 
 	}
 	
-	
-}
-//occurrence 
+	// occurrence 
 	public int countOccurrence(String word, char c) {
 		int count = 0; 
 		for ( int i = 0; i<word.length(); i++ ) {
-			if (word.charAt(i) == c) {
-				count++; 
+			if (word.charAt(i) == c || word.charAt(i) == Character.toUpperCase(c)) {
+				count++;
 			}
 		}
 		return count; 
 	}
+}

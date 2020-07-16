@@ -1,8 +1,9 @@
 package com.junit.examples;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 class JunitTestingTest {
@@ -22,6 +23,12 @@ class JunitTestingTest {
 		assertFalse(sq == 91); 
 	}
 	
+	@Test 
+	public void assertEquals () {
+		int output = junitTesting.square(5); 
+		Assert.assertEquals(25, output); 
+	}
+	
 	
 	// Testing occurrence 
 	@Test
@@ -35,4 +42,6 @@ class JunitTestingTest {
 		int numberOfNotOccurrence = junitTesting.countOccurrence("megaladon", 'x'); 
 		assertFalse(numberOfNotOccurrence==34); 
 	}
+	
+	
 }
