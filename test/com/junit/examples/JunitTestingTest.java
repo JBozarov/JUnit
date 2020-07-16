@@ -1,6 +1,6 @@
 package com.junit.examples;
 
-import static org.junit.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.Assert;
@@ -24,9 +24,15 @@ class JunitTestingTest {
 	}
 	
 	@Test 
-	public void assertEquals () {
+	public void assertEqualsMethodTest () {
 		int output = junitTesting.square(5); 
 		Assert.assertEquals(25, output); 
+	}
+	
+	@Test 
+	public void assertNotEqualMethodTest() {
+		int output = junitTesting.square(7); 
+		Assert.assertNotEquals(79, output);
 	}
 	
 	
@@ -44,4 +50,65 @@ class JunitTestingTest {
 	}
 	
 	
+	
+	
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
