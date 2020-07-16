@@ -10,3 +10,13 @@ public class JunitTesting {
 	
 	
 }
+//occurrence 
+	public int countOccurrence(String word, char c) {
+		int count = 0; 
+		for ( int i = 0; i<word.length(); i++ ) {
+			if (word.charAt(i) == c) {
+				count++; 
+			}
+		}
+		return count; 
+	}
